@@ -1,0 +1,50 @@
+{
+  "name": "electron-react-api-app",
+  "version": "1.0.0",
+  "description": "Electron.js ve React ile API işlemleri yapan uygulama",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "electron-dev": "wait-on http://localhost:3000 && electron .",
+    "react-start": "cross-env BROWSER=none react-scripts start",
+    "dev": "concurrently \"npm run react-start\" \"npm run electron-dev\"",
+    "build": "react-scripts build && electron-builder",
+    "react-build": "react-scripts build"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.7",
+    "electron-is-dev": "^3.0.1",
+    "file-saver": "^2.0.5",
+    "react": "^19.1.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "react-router-bootstrap": "^0.26.3",
+    "react-router-dom": "^7.6.3",
+    "react-scripts": "^5.0.1",
+    "xlsx": "^0.18.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
